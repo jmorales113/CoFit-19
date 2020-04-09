@@ -19,8 +19,8 @@ a {
 .pure-menu {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
-	padding: 3rem;
+	align-items: center;
+	padding-right: 2rem;
 	border-bottom: 1px #000 solid;
 }
 
@@ -28,23 +28,9 @@ a {
 	font-size: 4rem;
 }
 
-header a {
-	font-size: 1.2rem;
-	transition: color 300ms;
-}
-
-header a:hover {
-	color: #666;
-}
-
-header span {
-	margin-left: 2rem;
-}
-
-nav {
-	display: flex;
-}
-
-.nav-link {
-	margin: 0 1rem;
+@media (max-width: 900px) {
+	.pure-menu {
+		flex-direction: column;
+		padding-bottom: 1rem;
+	}
 }
