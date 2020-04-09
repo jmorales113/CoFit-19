@@ -1,0 +1,50 @@
+/* global attributes */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #222;
+	background: #eee;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
+/* header */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 3rem;
+	border-bottom: 1px #000 solid;
+}
+
+#title {
+	font-size: 4rem;
+}
+
+header a {
+	font-size: 1.2rem;
+	transition: color 300ms;
+}
+
+header a:hover {
+	color: #666;
+}
+
+header span {
+	margin-left: 2rem;
+}
+
+nav {
+	display: flex;
+}
+
+.nav-link {
+	margin: 0 1rem;
+}
