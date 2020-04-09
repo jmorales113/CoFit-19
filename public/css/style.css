@@ -16,7 +16,7 @@ a {
 
 /* header */
 
-header {
+.pure-menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -24,7 +24,7 @@ header {
 	border-bottom: 1px #000 solid;
 }
 
-#title {
+.pure-menu-heading {
 	font-size: 4rem;
 }
 
