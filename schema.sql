@@ -18,17 +18,18 @@ CREATE TABLE customFood
     (id)
 );
 
-    CREATE TABLE customWorkouts
-    (
-        id INTEGER(100),
-        workouts VARCHAR (200),
-        PRIMARY KEY(id)
-    );
+CREATE TABLE customWorkouts
+(
+    id INTEGER(100),
+    workouts VARCHAR (200),
+    PRIMARY KEY(id)
+);
 
-    CREATE TABLE dailyLog
-    (
-        id INTEGER(100),
-        macros VARCHAR (200),
-        PRIMARY KEY(id)
-    );
+CREATE TABLE dailyLog
+(
+    id INTEGER(100),
+    macros VARCHAR (200),
+    PRIMARY KEY(id)
+);
+
 

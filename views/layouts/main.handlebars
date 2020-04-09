@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/314044026f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="{{cssLink}}">
+    <link rel="stylesheet" href="{{cssLink}}">
     <title>{{title}}</title>
 </head>
 <body>
-    <header>
-        <a id="title" href="/">CoFit-19</h1>
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="/" class="pure-menu-heading pure-menu-link">CoFit-19</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="/about" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="/nutrition" class="pure-menu-link">Nutrition</a></li>
+            <li class="pure-menu-item"><a href="/exercise" class="pure-menu-link">Exercise</a></li>
+            <span>
+            |<li class="pure-menu-item"><a href="/register" class="pure-menu-link">Sign Up</a></li>|<li class="pure-menu-item"><a href="/login" class="pure-menu-link">Login</a></li>
 
-        <nav>
-            <a class="nav-link" href="/about">About</a>
-            <a class="nav-link" href="/nutrition">Nutrition</a>
-            <a class="nav-link" href="/exercise">Exercise</a>
-            <span><a href="/register">Sign Up</a> | <a href="/login">Login</a></span>
-        </nav>
-    </header>
+            </span>
+        </ul>
+    </div>
     {{{body}}}
+
+<!-- Compressed JavaScript -->
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
