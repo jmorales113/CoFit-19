@@ -1,0 +1,83 @@
+<br>
+<div class="container">
+    <div class="side">
+        <ol>
+            <li><a href="Daily Log">Daily Log</a></li>
+            <br>
+            <li><a href="BMI Calculator">BMI Calculator</a></li>
+            <br>
+            <li><a href="Macro Calculator">Macro Calculator</a></li>
+            <br>
+            <li><a href="Workouts">Workouts</a></li>
+            <br>
+        </ol>
+    </div>
+    <div class="main">
+        <h2>Macro Calculator</h2>
+        <form class="pure-form">
+            <fieldset class="pure-group">
+                <div class="formRow">
+                    <input type="text" class="pure-input-1-2" placeholder="Height">
+                    <select>
+                        <option value="in">in</option>
+                        <option value="cm">cm</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <input type="text" class="pure-input-1-2" placeholder="Weight">
+                    <select>
+                        <option value="lbs">lbs</option>
+                        <option value="kgs">kgs</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <input type="text" class="pure-input-1-2" placeholder="Age">
+                </div>
+                <div class="formRow">
+                    <select>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="decline">Decline to identify</option>
+                    </select>
+                </div>
+                <select>
+                    <option value="noEx">Little to no exercise</option>
+                    <option value="moderateEx">Moderate exercise</option>
+                    <option value="regularEx">Regularly exercise</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <h3>Total Recommended Calories per day</h3>
+        <div class="displayCalPerDay"></div>
+    </div>
+</div>
+
+
+<style>
+    .container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas:
+            "s m m m"
+            "s m m m";
+        grid-template-rows: 20vh 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    h2, h3{
+        font-size: 30px;
+    }
+   
+    .side {
+        grid-area: s;
+        background-color: grey;
+        margin: 2rem;
+        text-align: center;
+        padding-top: 70px;
+        font-size: 30px;
+        color: beige;
+    }
+</style>
