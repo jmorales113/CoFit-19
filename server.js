@@ -17,10 +17,10 @@ app.use(express.json());
 // set view engine to handlebars
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-// Routes
+// routes
 app.use('/myplan', userRoutes);
 app.use('/', htmlRoutes);
-
+// starts server 
 app.listen(PORT, () => {
 	console.log(`Server listening at PORT: ${PORT}`);
 });
