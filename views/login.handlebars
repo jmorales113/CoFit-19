@@ -1,0 +1,35 @@
+<div class="container">
+    <form class="pure-form pure-form-aligned" action="/login" method="POST">
+            <div class="pure-control-group">
+                <input name="email" id="email" type="text" placeholder="Email Address">
+            </div>
+
+            <div class="pure-control-group">
+                <input name="password" id="password" type="password" placeholder="Password">
+            </div>
+
+            <div class="pure-controls">
+                <button type="submit" class="pure-button pure-button-primary">Login</button>
+            </div>
+    </form>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 5rem;
+    }
+    form {
+        width: 50%;
+    }
+    form input {
+        width: 100%;
+    }
+    .pure-form-aligned .pure-controls {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+</style>
