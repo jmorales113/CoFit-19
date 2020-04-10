@@ -1,3 +1,107 @@
+<br>
+<div class="container">
+    <div class="side">
+        <a href="/myplan">Daily Log</a>
+        <a href="/myplan/bmi-calculator">BMI Calculator</a>
+        <a href="/myplan/macro-calculator">Macro Calculator</a>
+        <a href="/mypan/workouts">Workouts</a>
+    </div>
+    <div class="main">
+        <h2 class="main-title">Macro Calculator</h2>
+        <form action="/myplan/macro-calculator" action="POST">
+                <div class="formRow">
+                    <input type="text" name="height" placeholder="Height">
+                    <select name="heightUnit">
+                        <option value="in">in</option>
+                        <option value="cm">cm</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <input type="text" name="weight" placeholder="Weight">
+                    <select name="weightUnit">
+                        <option value="lbs">lbs</option>
+                        <option value="kgs">kgs</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <input type="text" name="age" placeholder="Age">
+                </div>
+                <div class="formRow">
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="decline">Decline to identify</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <select name="exerciseLevel">
+                        <option value="noEx">Little to no exercise</option>
+                        <option value="moderateEx">Moderate exercise</option>
+                        <option value="regularEx">Regularly exercise</option>
+                    </select>
+                </div>
+                <button type="submit" >Calculate</button>
+        </form>
+    </div>
+
+</div>
 
 
+<style>
+    .container {
+        display: grid;
+        width: 100%;
+        height: 80vh;
+        grid-template-areas:
+            "s m m m";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 
+    h2, h3{
+        font-size: 30px;
+    }
+    .main-title {
+        margin-bottom: 2rem;
+    }
+    .formRow {
+        margin-bottom: 1rem;
+    }
+    .main {
+        grid-area: m;
+    }
+    .side {
+        grid-area: s;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 3rem;
+    }
+    form {
+        width: 100%;
+        height: 100%;
+    }
+    form input {
+        min-width: 70%;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    form select {
+        font-size: 1.5rem;
+        height: 100%;
+        background: none;
+    }
+    form button {
+        font-size: 1.5rem;
+        background: grey;
+        padding: 1rem 2rem;
+        color: #fff;
+        transition: all 300ms;
+    }
+    form button:hover {
+        background: rgb(100, 100, 100);
+    }
+</style>
