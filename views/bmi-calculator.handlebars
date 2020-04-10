@@ -1,0 +1,113 @@
+
+<div class="container">
+    <div class="side-menu">
+        <a href="/myplan">Daily Log</a>
+        <a href="/myplan/bmi-calculator">BMI Calculator</a>
+        <a href="/myplan/macro-calculator">Macro Calculator</a>
+        <a href="/mypan/workouts">Workouts</a>
+    </div>
+    <div class="main">
+        <h1 class="main-title">BMI Calculator</h1>
+        <form action="/myplan/macro-calculator" action="POST">
+
+                <div class="form-row">
+                    <select name="identity">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="no-preference">No preference</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-row">
+                    <input type="text" name="height" placeholder="Height">
+                    <select name="height-info">
+                        <option value="in">in.</option>
+                        <option value="cm">cm.</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-row">
+                    <input type="text" name="weight" placeholder="Weight">
+                    <select name="weight-info">
+                        <option value="lbs">lbs.</option>
+                        <option value="kgs">kgs.</option>
+                    </select>
+                </div>
+
+                <button class = "button" type="submit" >Calculate</button>
+
+        </form>
+    </div>
+
+</div>
+
+
+<style>
+    .container {
+        display: grid;
+        width: 100%;
+        height: 80vh;
+        grid-template-areas:
+            "s m m m";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .side-menu {
+        grid-area: s;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 3rem;
+    }
+
+    .main {
+        grid-area: m;
+    }
+
+    .main-title {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 30px
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-row {
+        margin-bottom: 1rem;
+    }
+
+    select {
+        font-size: 1.5rem;
+        height: 100%;
+        background: none;
+    }
+
+    input {
+        min-width: 70%;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 1.5rem;
+        background-color: black;
+        padding: 1rem 2rem;
+        color: #fff;
+        transition: all 300ms;
+        margin-top: 200px
+    }
+
+    form button:hover {
+        background: black
+    }
+    
+</style>
