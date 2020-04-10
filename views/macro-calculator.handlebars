@@ -48,8 +48,8 @@
             </fieldset>
         </form>
     </div>
-    <div>
-        <h3>Total Recommended Calories per day</h3>
+    <div class = "calorieNumber">
+        <h3>Total number of calories you need to maintain your current weight</h3>
         <div class="displayCalPerDay"></div>
     </div>
 </div>
@@ -67,16 +67,22 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    h2, h3{
+    h2 {
         font-size: 30px;
     }
+    h3 { 
+        font-size: 28px;
+    }
+    {{!-- .main {
+        display: inline;
+    } --}}
    
     .side {
         grid-area: s;
         background-color: grey;
         margin: 2rem;
         text-align: center;
-        padding-top: 70px;
+        padding-top: 90px;
         font-size: 30px;
         color: beige;
     }
