@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Welcome | CoFit-19</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div class="background-video">
+      {{!-- <video src="" class="video" autoplay loop muted></video> --}}
+    </div>
+    <div class="container">
+      <header>
+        <nav>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/nutrition">Nutrition</a>
+            <a class="nav-link" href="/exercise">Exercise</a>
+        </nav>
+        <div>
+            <span style="font-size: 1.3rem;"><a href="/login">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/register">Sign Up</a></span>
+        </div>
+      </header>
+    
+        <div class="title-container">
+            <h1 id="title">CoFit-19</h1>
+            <h2 id="subtitle">Slogan will go here</h2>
+        </div>
+
+    </div>
+
+    <style>
+        a {
+            text-decoration: none;
+            color: currentColor;
+            font-size: 1.3rem;
+            transition: all 300ms;
+        }
+        a:hover {
+            color: #666;
+        }
+        .container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem;
+        }
+        .nav-link {
+            margin: 1rem;
+        }
+        .title-container {
+            margin-bottom: 15rem;
+        }
+        #title {
+            font-size: 8rem;
+            margin-left: 10rem;
+        }
+        #subtitle {
+            margin-left: 15rem;
+            font-size: 3rem;
+        }
+    </style>
+    
+</body>
+</html>
