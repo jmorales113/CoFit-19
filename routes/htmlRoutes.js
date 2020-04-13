@@ -3,6 +3,7 @@ const router = express.Router();
 const connection = require('../db');
 const bcrypt = require('bcrypt');
 
+
 router
 	.get('/', (req, res) => {
 		res.render('home', { layout: false });

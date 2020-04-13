@@ -44,3 +44,18 @@ password VARCHAR
 PRIMARY KEY
     (id)
 );
+
+CREATE TABLE macros
+(
+ id INTEGER
+    AUTO_INCREMENT NOT NULL,
+    heightInput INTEGER (5),
+    weightInput INTEGER (5),
+    ageInput INTEGER (5),
+    genderInput VARCHAR (30),  
+    amtExercise VARCHAR (30),  
+ 
+    PRIMARY KEY
+    (id)
+
+)

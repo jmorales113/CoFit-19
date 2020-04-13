@@ -17,49 +17,52 @@
         <form class="pure-form">
             <fieldset class="pure-group">
                 <div class="formRow">
-                    <input type="text" class="pure-input-1-2" placeholder="Height">
-                    <select>
+                    <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
+                    {{!-- <input id = "heightInput" type="text" class="pure-input-1-2" placeholder="Height in"> --}}
+                    {{!-- <select>
                         <option value="in">in</option>
-                        <option value="cm">cm</option>
-                    </select>
+                    </select> --}}
                 </div>
                 <div class="formRow">
-                    <input type="text" class="pure-input-1-2" placeholder="Weight">
+                    <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
                     <select>
                         <option value="lbs">lbs</option>
-                        <option value="kgs">kgs</option>
+                        {{!-- <option value="kgs">kgs</option> --}}
                     </select>
                 </div>
                 <div class="formRow">
-                    <input type="text" class="pure-input-1-2" placeholder="Age">
+                    <input id="ageInput" type="text" class="pure-input-1-2" placeholder="Age">
                 </div>
                 <div class="formRow">
-                    <select>
+                    <select id="genderInput">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="decline">Decline to identify</option>
                     </select>
                 </div>
-                <select>
+                <select id="amtExercise">
                     <option value="noEx">Little to no exercise</option>
                     <option value="moderateEx">Moderate exercise</option>
                     <option value="regularEx">Regularly exercise</option>
                 </select>
+                <i class="fas home-search-button fa-search fa" id="save"=></i>
             </fieldset>
         </form>
     </div>
-    <div class = "calorieNumber">
-        <h3>Total number of calories you need to maintain your current weight</h3>
-        <div class="displayCalPerDay"></div>
+    <div class="card">
+        <div class="card-container">
+            <h3>Total number of calories you need to maintain your current weight</h3>
+            <p class="displayCalPerDay"></p>
+
+        </div>
     </div>
 </div>
-
 
 <style>
     .container {
         display: grid;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         grid-template-areas:
             "s m m m"
             "s m m m";
@@ -70,13 +73,15 @@
     h2 {
         font-size: 30px;
     }
-    h3 { 
+
+    h3 {
         font-size: 28px;
     }
-    {{!-- .main {
+
+    .main {
         display: inline;
-    } --}}
-   
+    }
+
     .side {
         grid-area: s;
         background-color: grey;
@@ -85,5 +90,26 @@
         padding-top: 90px;
         font-size: 30px;
         color: beige;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card-container {
+        padding: 2px 16px;
+    }
+    .card-container p{
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+        font-size: 30pt;
     }
 </style>
