@@ -1,7 +1,4 @@
-//kg to lb = 1kg = 2.20462
-// i have the user input male and female 
-// const heightInput = $("heightInputFt").val + $("heightInputIn").val
-
+//Macros calculator
 var amountEx = $("#amtExercise")
 var genderInput =$("#genderInput")
 
@@ -48,35 +45,36 @@ function ftConversion(heightInput){
 function male(weight, height, age){
     height = ftConversion(height)
     let maleResults = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age) 
-     switch (amountEx) {
-      case "noEx": 
-        maleResults * 1.2
-        break;
-        case "moderateEx":
-        maleResults * 1.5
-        break;
-        case "regularEx":
-        maleResults * 1.7
-        break;
-        }
-        roundedResults = Math.floor(maleResults)
-        return roundedResults
+    switch (amountEx) {
+    case "noEx": 
+    maleResults * 1.2
+    break;
+    case "moderateEx":
+    maleResults * 1.5
+    break;
+    case "regularEx":
+    maleResults * 1.7
+    break;
+    }
+    roundedResults = Math.floor(maleResults)
+    return roundedResults
 }
 
             
-    function female(weight, height, age){
-        height = ftConversion(height)
-        let femaleResults = 655 + (4.3 * weight) + (4.7 * height) - (4.7 * age)
-        switch (amtExercise) {
-        case "noEx": 
-        femaleResults * 1.2
-        break;
-        case "moderateEx":
-        femaleResults * 1.5
-        break;
-        case "regularEx":
-        femaleResults * 1.7
-        }
-        roundedResults = Math.floor(femaleResults)
-        return roundedResults              
+function female(weight, height, age){
+    height = ftConversion(height)
+    let femaleResults = 655 + (4.3 * weight) + (4.7 * height) - (4.7 * age)
+    switch (amtExercise) {
+    case "noEx": 
+    femaleResults * 1.2
+    break;
+    case "moderateEx":
+    femaleResults * 1.5
+    break;
+    case "regularEx":
+    femaleResults * 1.7
     }
+    roundedResults = Math.floor(femaleResults)
+    return roundedResults              
+}
+//end Macros Calculator

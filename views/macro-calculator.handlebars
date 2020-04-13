@@ -1,21 +1,14 @@
 <br>
 <div class="container">
     <div class="side">
-        <ol>
-            <li><a href="Daily Log">Daily Log</a></li>
-            <br>
-            <li><a href="BMI Calculator">BMI Calculator</a></li>
-            <br>
-            <li><a href="Macro Calculator">Macro Calculator</a></li>
-            <br>
-            <li><a href="Workouts">Workouts</a></li>
-            <br>
-        </ol>
+        <a href="/myplan">Daily Log</a>
+        <a href="/myplan/bmi-calculator">BMI Calculator</a>
+        <a href="/myplan/macro-calculator">Macro Calculator</a>
+        <a href="/mypan/workouts">Workouts</a>
     </div>
     <div class="main">
-        <h2>Macro Calculator</h2>
-        <form class="pure-form">
-            <fieldset class="pure-group">
+        <h2 class="main-title">Macro Calculator</h2>
+        <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
                     <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
                     {{!-- <input id = "heightInput" type="text" class="pure-input-1-2" placeholder="Height in"> --}}
@@ -64,10 +57,8 @@
         width: 100%;
         height: 100%;
         grid-template-areas:
-            "s m m m"
             "s m m m";
-        grid-template-rows: 20vh 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     h2 {
