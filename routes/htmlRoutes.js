@@ -8,10 +8,10 @@ router
 		res.render('home', { layout: false });
 	})
 	.get('/about', (req, res) => {
-		res.render('about', { title: 'About' });
+		res.render('about', { title: 'About', cssLink: "../css/about.css" });
 	})
 	.get('/login', (req, res) => {
-		res.render('login', { title: 'Login' });
+		res.render('login', { title: 'Login' , cssLink: "../css/login.css"});
 	})
 	.post('/login', (req, res) => {
 		console.log(req.body);
@@ -21,13 +21,13 @@ router
 		validateNewUser(req, res);
 	})
 	.get('/register', (req, res) => {
-		res.render('register', { title: 'Register' });
+		res.render('register', { title: 'Register' , cssLink: "../css/register.css"});
 	})
 	.get('/nutrition', (req, res) => {
-		res.render('nutrition', { title: 'Nutrition' });
+		res.render('nutrition', { title: 'Nutrition' , cssLink: "../css/nutrition.css"});
 	})
 	.get('/exercise', (req, res) => {
-		res.render('exercise', { title: 'Exercise' });
+		res.render('exercise', { title: 'Exercise', cssLink: "../css/exercise.css"});
 	});
 
 module.exports = router;
