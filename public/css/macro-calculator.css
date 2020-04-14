@@ -1,0 +1,91 @@
+.container {
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-areas:
+        "s m m m";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h2, h3{
+    font-size: 30px;
+}
+.main-title {
+    margin-bottom: 2rem;
+}
+.formRow {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main {
+    grid-area: m;
+    margin: 3rem;
+}
+.side {
+    grid-area: s;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 3rem;
+}
+form {
+    width: 100%;
+    height: 100%;
+}
+form input {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.formRow-select {
+    margin-left: 1rem;
+}
+form select {
+    font-size: 1.5rem;
+    height: 100%;
+    background: none;
+}
+form button {
+    font-size: 1.5rem;
+    background: grey;
+    padding: 1rem 2rem;
+    color: #fff;
+    transition: all 300ms;
+}
+form button:hover {
+    background: rgb(99, 65, 65);
+}
+
+
+@media (max-width: 1250px) {
+    .container {
+        grid-template-areas:
+            "s"
+            "m";
+        grid-template-columns: 1fr;
+    }
+    .side {
+        flex-direction: row;
+        margin: 0rem;
+    }
+}
+@media (max-width: 800px) {
+    .side {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    input, select {
+        font-size: 1rem;
+    }
+    .side {
+        font-size: .8rem;
+    }
+}
