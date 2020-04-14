@@ -11,16 +11,16 @@
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
                     <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
-                    {{!-- <input id = "heightInput" type="text" class="pure-input-1-2" placeholder="Height in"> --}}
-                    {{!-- <select>
-                        <option value="in">in</option>
-                    </select> --}}
+                    <select>
+                        <option value="in"></option>
+                        <option value="cm"></option>
+                    </select>
                 </div>
                 <div class="formRow">
                     <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
                     <select>
                         <option value="lbs">lbs</option>
-                        {{!-- <option value="kgs">kgs</option> --}}
+                        <option value="kgs">kgs</option>
                     </select>
                 </div>
                 <div class="formRow">
@@ -50,7 +50,7 @@
         </div>
     </div>
 </div>
-<script src = "/public/js/macroScript.js"
+<script src = "/public/js/macroScript.js"</script>
 <style>
     .container {
         display: grid;

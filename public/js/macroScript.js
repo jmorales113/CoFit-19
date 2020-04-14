@@ -1,4 +1,6 @@
 //Macros calculator
+
+//1 inch = 2.54cm
 var amountEx = $("#amtExercise")
 var genderInput =$("#genderInput")
 
@@ -24,15 +26,7 @@ $("#save").on("click", function(event){
     })
 
 })
-//save gender results
 
-function genderSelect(male, female, decline){
-    // switch(genderInput)
-;
-}
-genderInput.on("click",function(){
-    genderSelect(genderInput)
-})
 //function to convert ft to inches
 function ftConversion(heightInput){
     const heightComponent = heightInput.split(".");
@@ -41,6 +35,13 @@ function ftConversion(heightInput){
     console.log(inchesHeight)
     return inchesHeight 
 }
+
+function cmConversion(){
+
+
+
+}
+
 function male(weight, height, age){
     height = ftConversion(height)
     let maleResults = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age) 
