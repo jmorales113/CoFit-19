@@ -1,24 +1,33 @@
-<br>
 <div class="container">
     <div class="side">
         <a href="/myplan">Daily Log</a>
         <a href="/myplan/bmi-calculator">BMI Calculator</a>
         <a href="/myplan/macro-calculator">Macro Calculator</a>
-        <a href="/mypan/workouts">Workouts</a>
+        <a href="/myplan/workouts">Workouts</a>
     </div>
     <div class="main">
         <h2 class="main-title">Macro Calculator</h2>
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
+
                     <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
                     {{!-- <input id = "heightInput" type="text" class="pure-input-1-2" placeholder="Height in"> --}}
                     {{!-- <select>
+=======
+                    <input type="text" name="height" placeholder="Height">
+                    <select  class="formRow-select" name="heightUnit">
+
                         <option value="in">in</option>
                     </select> --}}
                 </div>
                 <div class="formRow">
+
                     <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
                     <select>
+=======
+                    <input type="text" name="weight" placeholder="Weight">
+                    <select class="formRow-select" name="weightUnit">
+
                         <option value="lbs">lbs</option>
                         {{!-- <option value="kgs">kgs</option> --}}
                     </select>
@@ -64,13 +73,27 @@
     h2 {
         font-size: 30px;
     }
-
     h3 {
         font-size: 28px;
+=======
+    .main-title {
+        margin-bottom: 2rem;
+    }
+    .formRow {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
     }
 
     .main {
+
         display: inline;
+=======
+        grid-area: m;
+        margin: 3rem;
+
     }
 
     .side {
@@ -90,17 +113,65 @@
         min-height: 200px;
     }
 
+
     .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+=======
+    form input {
+        flex-grow: 1;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .formRow-select {
+        margin-left: 1rem;
+    }
+    form select {
+        font-size: 1.5rem;
+        height: 100%;
+        background: none;
+
     }
 
     .card-container {
         padding: 2px 16px;
     }
+
     .card-container p{
         text-align: center;
         width: 100%;
         padding-top: 20px;
         font-size: 30pt;
+=======
+    form button:hover {
+        background: rgb(99, 65, 65);
+    }
+
+
+    @media (max-width: 1250px) {
+        .container {
+            grid-template-areas:
+                "s"
+                "m";
+            grid-template-columns: 1fr;
+        }
+        .side {
+            flex-direction: row;
+            margin: 0rem;
+        }
+    }
+    @media (max-width: 800px) {
+        .side {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        input, select {
+            font-size: 1rem;
+        }
+        .side {
+            font-size: .8rem;
+        }
+
     }
 </style>

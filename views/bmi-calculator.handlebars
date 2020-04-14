@@ -4,11 +4,11 @@
         <a href="/myplan">Daily Log</a>
         <a href="/myplan/bmi-calculator">BMI Calculator</a>
         <a href="/myplan/macro-calculator">Macro Calculator</a>
-        <a href="/mypan/workouts">Workouts</a>
+        <a href="/myplan/workouts">Workouts</a>
     </div>
     <div class="main">
         <h1 class="main-title">BMI Calculator</h1>
-        <form action="/myplan/macro-calculator" action="POST">
+        <form action="/myplan/bmi-calculator" action="POST">
 
                 <div class="form-row">
                     <select name="identity">
@@ -19,7 +19,7 @@
                 </div>
                 <br>
                 <div class="form-row">
-                    <input type="text" name="height" placeholder="Height">
+                    <input type="text" class="height" placeholder="Height">
                     <select name="height-info">
                         <option value="in">in.</option>
                         <option value="cm">cm.</option>
@@ -27,14 +27,16 @@
                 </div>
                 <br>
                 <div class="form-row">
-                    <input type="text" name="weight" placeholder="Weight">
+                    <input type="text" class="weight" placeholder="Weight">
                     <select name="weight-info">
                         <option value="lbs">lbs.</option>
                         <option value="kgs">kgs.</option>
                     </select>
                 </div>
-
+                <div>
                 <button class = "button" type="submit" >Calculate</button>
+                <h1 class="bmi-calculation"></h1>
+                </div>
 
         </form>
     </div>
@@ -66,6 +68,7 @@
 
     .main {
         grid-area: m;
+        margin: 3rem;
     }
 
     .main-title {
@@ -83,6 +86,10 @@
 
     .form-row {
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 3rem;
     }
 
     select {
@@ -91,23 +98,87 @@
         background: none;
     }
 
+    .form-row select {
+        margin-left: 1rem;
+    }
     input {
-        min-width: 70%;
+        flex-grow: 1;
         font-size: 1.5rem;
         padding: 10px;
     }
 
+    input:focus {
+        outline: none;
+    }
+
     .button {
         font-size: 1.5rem;
-        background-color: black;
+        background-color: grey;
         padding: 1rem 2rem;
         color: #fff;
         transition: all 300ms;
-        margin-top: 175px
+        margin-top: 1rem;
     }
 
     form button:hover {
         background: black
     }
+
+    @media (max-width: 1250px) {
+        .container {
+            grid-template-areas:
+                "s"
+                "m";
+            grid-template-columns: 1fr;
+        }
+        .side-menu {
+            flex-direction: row;
+            margin: 0rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .side-menu {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        input, select {
+            font-size: 1rem;
+        }
+        .side-menu {
+            font-size: .8rem;
+        }
+    .bmi-calculation {
+        display: inline-block;
+        text-align: center;
+        margin-left: 200px;
+    }
     
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+    $("document").ready(function() {
+
+        let form = $("form")
+
+        form.on("submit", function(event){
+            event.preventDefault()
+            let result = $(".bmi-calculation")
+
+            function calculateBMI() {
+            let height = $(".height").val()
+            let weight = $(".weight").val()
+            let bmi = weight / (height * height)
+            return bmi.toFixed(2)
+            }
+
+            result.html(`YOUR ESTIMATED BMI IS ${calculateBMI()}`)
+        })
+    })
+        
+</script>
+
