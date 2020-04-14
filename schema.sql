@@ -19,7 +19,7 @@ CREATE TABLE customFood
     (id)
 );
 
-CREATE TABLE customWorkouts
+CREATE TABLE workouts
 (
     id INTEGER(100),
     workouts VARCHAR (200),

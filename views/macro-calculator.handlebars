@@ -1,24 +1,23 @@
-<br>
 <div class="container">
     <div class="side">
         <a href="/myplan">Daily Log</a>
         <a href="/myplan/bmi-calculator">BMI Calculator</a>
         <a href="/myplan/macro-calculator">Macro Calculator</a>
-        <a href="/mypan/workouts">Workouts</a>
+        <a href="/myplan/workouts">Workouts</a>
     </div>
     <div class="main">
         <h2 class="main-title">Macro Calculator</h2>
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
                     <input type="text" name="height" placeholder="Height">
-                    <select name="heightUnit">
+                    <select  class="formRow-select" name="heightUnit">
                         <option value="in">in</option>
                         <option value="cm">cm</option>
                     </select>
                 </div>
                 <div class="formRow">
                     <input type="text" name="weight" placeholder="Weight">
-                    <select name="weightUnit">
+                    <select class="formRow-select" name="weightUnit">
                         <option value="lbs">lbs</option>
                         <option value="kgs">kgs</option>
                     </select>
@@ -65,9 +64,13 @@
     }
     .formRow {
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .main {
         grid-area: m;
+        margin: 3rem;
     }
     .side {
         grid-area: s;
@@ -85,9 +88,12 @@
         height: 100%;
     }
     form input {
-        min-width: 70%;
+        flex-grow: 1;
         font-size: 1.5rem;
         padding: 10px;
+    }
+    .formRow-select {
+        margin-left: 1rem;
     }
     form select {
         font-size: 1.5rem;
@@ -102,6 +108,34 @@
         transition: all 300ms;
     }
     form button:hover {
-        background: rgb(100, 100, 100);
+        background: rgb(99, 65, 65);
+    }
+
+
+    @media (max-width: 1250px) {
+        .container {
+            grid-template-areas:
+                "s"
+                "m";
+            grid-template-columns: 1fr;
+        }
+        .side {
+            flex-direction: row;
+            margin: 0rem;
+        }
+    }
+    @media (max-width: 800px) {
+        .side {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        input, select {
+            font-size: 1rem;
+        }
+        .side {
+            font-size: .8rem;
+        }
     }
 </style>
