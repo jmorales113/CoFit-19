@@ -1,0 +1,110 @@
+.container {
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-areas:
+        "s m m m";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.side-menu {
+    grid-area: s;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 3rem;
+}
+
+.main {
+    grid-area: m;
+    margin: 3rem;
+}
+
+.main-title {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 30px
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+select {
+    font-size: 1.5rem;
+    height: 100%;
+    background: none;
+}
+
+.form-row select {
+    margin-left: 1rem;
+}
+input {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.button {
+    font-size: 1.5rem;
+    background-color: grey;
+    padding: 1rem 2rem;
+    color: #fff;
+    transition: all 300ms;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background: black
+}
+
+@media (max-width: 1250px) {
+    .container {
+        grid-template-areas:
+            "s"
+            "m";
+        grid-template-columns: 1fr;
+    }
+    .side-menu {
+        flex-direction: row;
+        margin: 0rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .side-menu {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    input, select {
+        font-size: 1rem;
+    }
+    .side-menu {
+        font-size: .8rem;
+    }
+.bmi-calculation {
+    display: inline-block;
+    text-align: center;
+    margin-left: 200px;
+}
