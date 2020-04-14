@@ -9,39 +9,173 @@
         <h2 class="main-title">Macro Calculator</h2>
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
+
+                    <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
+                    {{!-- <input id = "heightInput" type="text" class="pure-input-1-2" placeholder="Height in"> --}}
+                    {{!-- <select>
+=======
                     <input type="text" name="height" placeholder="Height">
                     <select  class="formRow-select" name="heightUnit">
+
                         <option value="in">in</option>
-                        <option value="cm">cm</option>
-                    </select>
+                    </select> --}}
                 </div>
                 <div class="formRow">
+
+                    <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
+                    <select>
+=======
                     <input type="text" name="weight" placeholder="Weight">
                     <select class="formRow-select" name="weightUnit">
+
                         <option value="lbs">lbs</option>
-                        <option value="kgs">kgs</option>
+                        {{!-- <option value="kgs">kgs</option> --}}
                     </select>
                 </div>
                 <div class="formRow">
-                    <input type="text" name="age" placeholder="Age">
+                    <input id="ageInput" type="text" class="pure-input-1-2" placeholder="Age">
                 </div>
                 <div class="formRow">
-                    <select name="gender">
+                    <select id="genderInput">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="decline">Decline to identify</option>
                     </select>
                 </div>
-                <div class="formRow">
-                    <select name="exerciseLevel">
-                        <option value="noEx">Little to no exercise</option>
-                        <option value="moderateEx">Moderate exercise</option>
-                        <option value="regularEx">Regularly exercise</option>
-                    </select>
-                </div>
-                <button type="submit" >Calculate</button>
+                <select id="amtExercise">
+                    <option value="noEx">Little to no exercise</option>
+                    <option value="moderateEx">Moderate exercise</option>
+                    <option value="regularEx">Regularly exercise</option>
+                </select>
+                <i class="fas home-search-button fa-search fa" id="save"=></i>
+            </fieldset>
         </form>
     </div>
+    <div class="card">
+        <div class="card-container">
+            <h3>Total number of calories you need to maintain your current weight</h3>
+            <p class="displayCalPerDay"></p>
 
+        </div>
+    </div>
 </div>
+
+<script src = "/public/js/macroScript.js"
+<style>
+    .container {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas:
+            "s m m m";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 28px;
+=======
+    .main-title {
+        margin-bottom: 2rem;
+    }
+    .formRow {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .main {
+
+        display: inline;
+=======
+        grid-area: m;
+        margin: 3rem;
+
+    }
+
+    .side {
+        grid-area: s;
+        background-color: grey;
+        margin: 2rem;
+        text-align: center;
+        padding-top: 90px;
+        font-size: 30px;
+        color: beige;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+        min-height: 200px;
+    }
+
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+=======
+    form input {
+        flex-grow: 1;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .formRow-select {
+        margin-left: 1rem;
+    }
+    form select {
+        font-size: 1.5rem;
+        height: 100%;
+        background: none;
+
+    }
+
+    .card-container {
+        padding: 2px 16px;
+    }
+
+    .card-container p{
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+        font-size: 30pt;
+=======
+    form button:hover {
+        background: rgb(99, 65, 65);
+    }
+
+
+    @media (max-width: 1250px) {
+        .container {
+            grid-template-areas:
+                "s"
+                "m";
+            grid-template-columns: 1fr;
+        }
+        .side {
+            flex-direction: row;
+            margin: 0rem;
+        }
+    }
+    @media (max-width: 800px) {
+        .side {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        input, select {
+            font-size: 1rem;
+        }
+        .side {
+            font-size: .8rem;
+        }
+
+    }
+</style>
+=======
+
 
