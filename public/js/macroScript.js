@@ -41,7 +41,6 @@ function ftConversion(heightInput){
     console.log(inchesHeight)
     return inchesHeight 
 }
-
 function male(weight, height, age){
     height = ftConversion(height)
     let maleResults = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age) 
@@ -59,8 +58,7 @@ function male(weight, height, age){
     roundedResults = Math.floor(maleResults)
     return roundedResults
 }
-
-            
+           
 function female(weight, height, age){
     height = ftConversion(height)
     let femaleResults = 655 + (4.3 * weight) + (4.7 * height) - (4.7 * age)
