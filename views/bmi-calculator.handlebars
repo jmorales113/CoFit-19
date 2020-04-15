@@ -43,30 +43,6 @@
 
 </div>
 
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<script>
-
-    $("document").ready(function() {
-
-        let form = $("form")
-
-        form.on("submit", function(event){
-            event.preventDefault()
-            let result = $(".bmi-calculation")
-
-            function calculateBMI() {
-            let height = $(".height").val()
-            let weight = $(".weight").val()
-            let bmi = weight / (height * height)
-            return bmi.toFixed(2)
-            }
-
-            result.html(`YOUR ESTIMATED BMI IS ${calculateBMI()}`)
-        })
-    })
-        
-</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./js/bmiCalculator.js"></script>
 
