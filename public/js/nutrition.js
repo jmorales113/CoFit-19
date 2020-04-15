@@ -10,9 +10,9 @@ let settings = {
 }
 }
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+// $.ajax(settings).done(function (response) {
+// 	console.log(response);
+// });
 
 
 let settingsTwo = {
@@ -27,10 +27,20 @@ let settingsTwo = {
 
 }, 
 	data: {
-		"query": "hamburger"
+		"query": "big mac" // userInput
 	}
 }
-	
-$.ajax(settingsTwo).done(function (response) {
-	console.log(response);
-});
+
+$("#button-search").on("click", function() {
+	let userInput = $("#value").val().trim()
+	console.log(userInput)
+
+// const {nf_calories: calories, nf_total_fat: fat, nf_protein: protein, nf_total_carbohydrate: carbs}  = response.foods[0]
+// console.log(calories, fat, protein, carbs )
+})	
+
+// $.ajax(settingsTwo).done(function(response) {
+
+		
+
+// })
