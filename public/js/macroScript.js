@@ -5,6 +5,7 @@ var amountEx = $('#amtExercise')
 var genderInput = $('#genderInput')
 
 $('#save').on('click', function (event) {
+  event.preventDefault()
   const userData = {}
   userData.heightInput = $('#heightInput').val()
   userData.weightInput = $('#weightInput').val()
@@ -50,7 +51,7 @@ function ftConversion(heightInput) {
 function getHeightInches(height, units) {
   let inHeight = height
   if (units === 'cm') {
-    inHeight = (height / 2.54)
+    inHeight = height / 2.54
   } else {
     inHeight = ftConversion(height)
   }
