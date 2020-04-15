@@ -9,39 +9,46 @@
         <h2 class="main-title">Macro Calculator</h2>
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
-                    <input type="text" name="height" placeholder="Height">
-                    <select  class="formRow-select" name="heightUnit">
-                        <option value="in">in</option>
-                        <option value="cm">cm</option>
+                    <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
+                    <select id="unit">
+                        <option value="in">in.</option>
+                        <option value="cm">cm.</option>
                     </select>
                 </div>
                 <div class="formRow">
-                    <input type="text" name="weight" placeholder="Weight">
-                    <select class="formRow-select" name="weightUnit">
-                        <option value="lbs">lbs</option>
-                        <option value="kgs">kgs</option>
+                    <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
+                    <select>
+                        <option value="lbs">lbs.</option>
+                        <option value="kgs">kgs.</option>
                     </select>
                 </div>
                 <div class="formRow">
-                    <input type="text" name="age" placeholder="Age">
+                    <input id="ageInput" type="text" class="pure-input-1-2" placeholder="Age">
                 </div>
                 <div class="formRow">
-                    <select name="gender">
+                    <select id="genderInput">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
-                        <option value="decline">Decline to identify</option>
+                        <option value="decline">No Preference</option>
                     </select>
                 </div>
                 <div class="formRow">
-                    <select name="exerciseLevel">
-                        <option value="noEx">Little to no exercise</option>
-                        <option value="moderateEx">Moderate exercise</option>
-                        <option value="regularEx">Regularly exercise</option>
-                    </select>
+                <select id="amtExercise">
+                    <option value="noEx">Little to no exercise</option>
+                    <option value="moderateEx">Moderate exercise</option>
+                    <option value="regularEx">Regularly exercise</option>
+                </select>
                 </div>
-                <button type="submit" >Calculate</button>
+               <button id ="save" class = "button" type="submit" >Calculate</button>
+                <h1 class="bmi-calculation"></h1>
+            </fieldset>
         </form>
     </div>
+    <div class="card">
+        <div class="card-container">
+            <h3>Total number of calories you need to maintain your current weight</h3>
+            <p class="displayCalPerDay"></p>
 
+        </div>
+    </div>
 </div>
-
