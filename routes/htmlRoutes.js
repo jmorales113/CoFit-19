@@ -27,9 +27,6 @@ router
 	.get('/nutrition', (req, res) => {
 		res.render('nutrition', { title: 'Nutrition' , cssLink: "../css/nutrition.css"});
 	})
-	.get('/exercise', (req, res) => {
-		res.render('exercise', { title: 'Exercise', cssLink: "../css/exercise.css"});
-	});
 
 module.exports = router;
 

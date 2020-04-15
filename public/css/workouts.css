@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-       .side-menu {
+.side-menu {
     grid-area: s;
     background-color: grey;
     display: flex;
@@ -17,84 +17,73 @@
     font-size: 1.5rem;
     color: #fff;
     margin: 3rem;
+    max-height: 60vh;
 }
 
-    .main {
+.main {
     grid-area: m;
 }
 
-    .button {
-    font-size: 1rem;
-    color: black;
-    background-color: grey;
-    padding: 1rem 2rem;
-    transition: all 300ms;
-    float: right;
-    margin-right: 30px;
-    display:inline-block;
-    margin-top: 17px;
-    
+.main-title {
+    margin-left: 3rem;
 }
 
-    .text-box {
+.workout-card {
+    padding: 2rem;
+    border: 1px solid black;
+    margin: 3rem;
+}
 
-        padding: 5px;
-        border: 1px solid black;
-    }
+.workout-card-title {
+    font-size: 50px;
+    margin: 0;
+}
 
-    .workouts-title {
-        font-size: 50px;
-        margin-left: 20px;
-        display: inline-block;
-        
-    }
+.workout-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
 
-    .para-one {
-        display: inline-block;
-        float: right;
-        margin-right: 20px;
-        margin-top: 50px;
-    }
+.workout-card-workout {
+    margin-left: 2rem;
+}
 
-    .list {
-        list-style-type: circle;
-        margin-left: 50px;
-    }
+.workout-card-workout li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
 
-    li {
-        padding: 40px;
-        font-size: 20px;
-    }
 
-    .para-two {
-        float: right;
-        margin-right: 20px;
-    }
 
-    @media (max-width: 1250px) {
-        .container {
-            grid-template-areas:
-                "s"
-                "m";
-            grid-template-columns: 1fr;
-        }
-        .side-menu {
-            flex-direction: row;
-            margin: 0rem;
-        }
+@media (max-width: 1250px) {
+    .container {
+        grid-template-areas:
+            "s"
+            "m";
+        grid-template-columns: 1fr;
     }
+    .side-menu {
+        flex-direction: row;
+        margin: 0rem;
+        padding: 2rem;
+    }
+}
 
-    @media (max-width: 800px) {
-        .side-menu {
-            font-size: 1rem;
-        }
+@media (max-width: 800px) {
+    .side-menu {
+        font-size: 1rem;
     }
+}
 
-    @media (max-width: 500px) {
-        input, select {
-            font-size: 1rem;
-        }
-        .side-menu {
-            font-size: .8rem;
-        }
+@media (max-width: 500px) {
+    input, select {
+        font-size: 1rem;
     }
+    .side-menu {
+        font-size: .8rem;
+    }
+}
