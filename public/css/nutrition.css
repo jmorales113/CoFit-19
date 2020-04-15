@@ -1,0 +1,41 @@
+.pure-form {
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pure-input-2-3{
+    flex-grow: 1;
+}
+
+#button-search {
+    margin-left: 1rem;
+    transition: all 300ms;
+}
+
+#button-search:hover {
+    color: #555;
+    cursor: pointer;
+}
+
+.nutrition-card {
+    padding: 2rem;
+    margin: 3rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+}
+
+.nutrition-card h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nutrition-card ul {
+    margin-left: 1rem;
+}
+
+.nutrition-card p {
+    margin-bottom: 1rem;
+}
+
+
