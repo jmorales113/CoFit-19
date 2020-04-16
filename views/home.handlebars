@@ -19,7 +19,11 @@
             <a class="nav-link" href="/nutrition">Nutrition</a>
         </nav>
         <div>
+          {{#if isAuthenticated}}
+                      <span style="font-size: 1.3rem;"><a href="/logout">Logout</a></span>
+          {{else}}
             <span style="font-size: 1.3rem;"><a href="/login">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/register">Sign Up</a></span>
+          {{/if}}
         </div>
       </header>
     

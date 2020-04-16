@@ -14,9 +14,13 @@
     <div class="pure-menu pure-menu-horizontal">
         <a href="/" class="pure-menu-heading pure-menu-link">CoFit-19</a>
         <ul class="pure-menu-list">
+            {{#if isAuthenticated}}
+            {{else}}
             <li class="pure-menu-item"><a href="/about" class="pure-menu-link">About</a></li>
+            {{/if}}
             <li class="pure-menu-item"><a href="/nutrition" class="pure-menu-link">Nutrition</a></li>
             {{#if isAuthenticated}}
+            <li class="pure-menu-item"><a href="/myplan" class="pure-menu-link">My Plan</a></li>
             <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a></li>
             {{else}}
             <span>

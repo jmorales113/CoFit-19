@@ -15,6 +15,9 @@ router
 			cssLink: '../css/bmi-calculator.css'
 		});
 	})
+	.post('/bmi-calculator', (req, res) => {
+		console.log(req.user);
+	})
 	.get('/macro-calculator', authenticationMiddleware(), (req, res) => {
 		res.render('macro-calculator', {
 			layout: 'myplan',
