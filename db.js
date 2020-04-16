@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
 	host: 'localhost',
 	post: 3306,
 	user: 'root',
-	password: 'passwordpassword',
+	password: '',
 	database: 'cofit19_db'
 });
 connection.connect(() => {
