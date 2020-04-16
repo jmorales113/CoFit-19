@@ -16,10 +16,13 @@
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="/about" class="pure-menu-link">About</a></li>
             <li class="pure-menu-item"><a href="/nutrition" class="pure-menu-link">Nutrition</a></li>
+            {{#if isAuthenticated}}
+            <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a></li>
+            {{else}}
             <span>
             |<li class="pure-menu-item"><a href="/register" class="pure-menu-link">Sign Up</a></li>|<li class="pure-menu-item"><a href="/login" class="pure-menu-link">Login</a></li>
-
             </span>
+            {{/if}}
         </ul>
     </div>
         <script
