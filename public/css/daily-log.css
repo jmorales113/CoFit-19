@@ -3,28 +3,72 @@ h2{
     margin-bottom: 2rem;
     margin-top: 2.5rem;
     }
-        .container {
-            display: grid;
-            width: 100%;
-            height: 80vh;
-            grid-template-areas:
-                "s m m m";
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        .side-menu {
-            grid-area: s;
-            background-color: grey;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            font-size: 1.5rem;
-            color: #fff;
-            margin: 3rem;
-        }
-        .main{
-        }
-        #history{
-            align-self: center;
-            justify-self: center;
-        }
+.container {
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-areas:
+        "s m m m";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.side-menu {
+    grid-area: s;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 3rem;
+}
+.side-menu a {
+    transition: color 300ms;
+}
+
+.side-menu a:hover {
+    color: rgb(197, 197, 197);
+}
+.main{
+    margin: 3rem;
+    margin-top: 0rem;
+}
+#history{
+    align-self: center;
+    justify-self: center;
+}
+
+
+@media (max-width: 1250px) {
+    .container {
+        grid-template-areas:
+            "s"
+            "m";
+        grid-template-columns: 1fr;
+    }
+    .side-menu {
+        flex-direction: row;
+        margin: 0rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .side-menu {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    input, select {
+        font-size: 1rem;
+    }
+    .side-menu {
+        font-size: .8rem;
+    }
+.bmi-calculation {
+    display: inline-block;
+    text-align: center;
+    margin-left: 200px;
+}
+}

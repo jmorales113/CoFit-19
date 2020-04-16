@@ -29,10 +29,9 @@ $('#save').on('click', function (event) {
     )
   }
   console.log('userData', userData)
+  $('.displayCalPerDay').text(`Recommended daily calorie intake: ${genderResults}`)
   $.post('/api/macros', userData, function (err, data) {
     console.log(data)
-
-    $('.displayCalPerDay').html(genderResults)
   })
 })
 

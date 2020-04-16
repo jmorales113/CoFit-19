@@ -19,6 +19,13 @@
     margin: 3rem;
     max-height: 60vh;
 }
+.side-menu a {
+    transition: color 300ms;
+}
+
+.side-menu a:hover {
+    color: rgb(197, 197, 197);
+}
 
 .main {
     grid-area: m;

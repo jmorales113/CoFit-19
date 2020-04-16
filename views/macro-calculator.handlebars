@@ -10,14 +10,14 @@
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
                     <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
-                    <select id="unit">
+                    <select class="formRow-select" id="unit">
                         <option value="in">in.</option>
                         <option value="cm">cm.</option>
                     </select>
                 </div>
                 <div class="formRow">
                     <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
-                    <select>
+                    <select class="formRow-select" i>
                         <option value="lbs">lbs.</option>
                         <option value="kgs">kgs.</option>
                     </select>
@@ -41,14 +41,10 @@
                 </div>
                <button id ="save" class = "button" type="submit" >Calculate</button>
                 <h1 class="bmi-calculation"></h1>
+                <div class="result">
+                    <p class="displayCalPerDay"></p>
+                </div>
             </fieldset>
         </form>
-    </div>
-    <div class="card">
-        <div class="card-container">
-            <h3>Total number of calories you need to maintain your current weight</h3>
-            <p class="displayCalPerDay"></p>
-
-        </div>
     </div>
 </div>

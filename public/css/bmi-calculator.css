@@ -18,6 +18,13 @@
     color: #fff;
     margin: 3rem;
 }
+.side-menu a {
+    transition: color 300ms;
+}
+
+.side-menu a:hover {
+    color: rgb(197, 197, 197);
+}
 
 .main {
     grid-area: m;
@@ -51,7 +58,8 @@ select {
     background: none;
 }
 
-.form-row select {
+.height-info,
+.weight-info {
     margin-left: 1rem;
 }
 input {

@@ -27,6 +27,14 @@ a {
 	font-size: 4rem;
 }
 
+.pure-menu-list a {
+	transition: color 300ms;
+}
+
+.pure-menu-list a:hover {
+	color: #000;
+}
+
 @media (max-width: 900px) {
 	.pure-menu {
 		flex-direction: column;
