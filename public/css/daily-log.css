@@ -1,3 +1,8 @@
+h2{
+    font-size: 30px;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    }
 .container {
     display: grid;
     width: 100%;
@@ -6,7 +11,6 @@
         "s m m m";
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .side-menu {
     grid-area: s;
     background-color: grey;
@@ -17,7 +21,6 @@
     font-size: 1.5rem;
     color: #fff;
     margin: 3rem;
-    max-height: 60vh;
 }
 .side-menu a {
     transition: color 300ms;
@@ -26,44 +29,14 @@
 .side-menu a:hover {
     color: rgb(197, 197, 197);
 }
-
-.main {
-    grid-area: m;
-}
-
-.main-title {
-    margin-left: 3rem;
-}
-
-.workout-card {
-    padding: 2rem;
-    border: 1px solid black;
+.main{
     margin: 3rem;
+    margin-top: 0rem;
 }
-
-.workout-card-title {
-    font-size: 50px;
-    margin: 0;
+#history{
+    align-self: center;
+    justify-self: center;
 }
-
-.workout-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-}
-
-.workout-card-workout {
-    margin-left: 2rem;
-}
-
-.workout-card-workout li {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
 
 
 @media (max-width: 1250px) {
@@ -93,4 +66,9 @@
     .side-menu {
         font-size: .8rem;
     }
+.bmi-calculation {
+    display: inline-block;
+    text-align: center;
+    margin-left: 200px;
+}
 }

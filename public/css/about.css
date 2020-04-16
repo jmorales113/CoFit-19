@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  h2{
+      font-size: 30px;
+  }
+  .container {
+    /* build the grid */
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+    "h h h h"
+    "s s m m"
+    "s s m m";
+    grid-template-rows: 20vh 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* style the grid */
+    background: url(../imgs/background6.jpg)
+    no-repeat center center/cover;   
+    color: #333333;
+    height:100%;
+    }
+    .header {
+    grid-area: h;
+    border: solid black 2px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+    .side {
+    grid-area: s;
+    /* border: solid black 2px; */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    }
+    .main {
+    grid-area: m;
+    /* border: solid black 2px; */
+    }
+    .img{
+        box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+        width: auto;
+        overflow: hidden;
+    }
+    .list li{
+        margin: 0.5rem 0;
+        list-style: none;
+    }
+    #meetUs li {
+        padding: 0.5rem 0;
+    }
+    .btn{
+        background-color: grey;
+        border: solid 1px red;
+        border-radius: 10%;
+        box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+        color: black;
+        cursor: pointer;
+        padding: 8px;
+        font-size: 20px;
+        text-decoration: none;
+    list-style: none;}
+ .text-primary{
+     color: red;
+ }
+ #text-center{
+     text-align:center;
+    }
+ .item .list{
+     align-content: center;
+     display: flex;
+     flex:1;
+     margin: auto;
+ }
+  .item i{
+     background: yellow;
+     border-radius: 50%;
+     padding: 2px
+}
+.item{
+    text-align: center;
+}
+#meetUs{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    border-bottom: black 1px dotted;
+}
+#meetUs li{
+    list-style: none;
+}
+#aboutUs{
+    margin-top: 100px;
+   margin: auto;
+    padding: 70px;
+    font-size: 24px;
+}
+.meetUs{
+    margin-top: 100px;
+}
