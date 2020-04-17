@@ -7,7 +7,7 @@ router
 	.get('/', authenticationMiddleware(), (req, res) => {
 		console.log(req.user);
 		console.log(req.isAuthenticated());
-
+		const userInfo = getUserInfo(req);
 		res.render('daily-log', { layout: 'myplan', title: 'Daily Log', cssLink: '../css/daily-log.css' });
 	})
 	.get('/bmi-calculator', authenticationMiddleware(), (req, res) => {
@@ -18,7 +18,8 @@ router
 		});
 	})
 	.post('/bmi-calculator', (req, res) => {
-		console.log(req.user);
+		console.log(req.user.user_id);
+		// connection.query(ADD IN BMI WHERE id = )
 	})
 	.get('/macro-calculator', authenticationMiddleware(), (req, res) => {
 		res.render('macro-calculator', {
@@ -40,4 +41,12 @@ function authenticationMiddleware() {
 		if (req.isAuthenticated()) return next();
 		res.redirect('/login');
 	};
+}
+
+function getUserInfo(req) {
+	const userId = req.user.user_id;
+	connection.query('SELECT macros, bmi, dailyLog FROM users WHERE id = ?', [userId], (err, data) => {
+		if (err) throw err;
+		console.log(data);
+	});
 }

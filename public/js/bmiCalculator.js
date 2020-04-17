@@ -27,7 +27,7 @@
             }
 
             result.html(`YOUR ESTIMATED BMI IS ${calculateBMI()}`)
-            $.post('/myplan/bmi-calculator', )
+            $.post('/myplan/bmi-calculator')
         })
     })
         

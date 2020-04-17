@@ -13,8 +13,8 @@ password VARCHAR
     (60) NOT NULL,
     bmi DECIMAL
     (50),
-    macros INTEGER
-    (100),
+    macros VARCHAR
+    (500),
     dailyLog VARCHAR
     (500),
 PRIMARY KEY
