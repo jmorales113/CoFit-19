@@ -30,7 +30,16 @@ $('#save').on('click', function (event) {
   }
   console.log('userData', userData)
   $('.displayCalPerDay').text(`Recommended daily calorie intake: ${genderResults}`)
-  $.post('/api/macros', userData, function (err, data) {
+
+  const calories = genderResults;
+  const carbs = Math.floor((calories * 0.4) / 4);
+  const protein = Math.floor((calories * 0.3) / 4);
+  const fat = Math.floor((calories * 0.3) / 9);
+
+  const macroData = {calories,protein,carbs,fat}
+
+  $.post('/myplan/macro-calculator', macroData, function (err, data) {
+    if (err) throw err;
     console.log(data)
   })
 })
