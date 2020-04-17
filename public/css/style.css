@@ -5,14 +5,14 @@
 }
 
 body {
-	color: #222;
+	color: #222; 
 	background: #eee;
 }
 
 a {
 	text-decoration: none;
 	color: #ffa41b;
-	border-radius: 10%;
+	border-radius: 2rem;
 }
 
 
@@ -36,7 +36,7 @@ a {
 }
 
 .pure-menu-list a:hover {
-	color: #000;
+	color:  #ffa41b;;
 }
 
 @media (max-width: 900px) {

@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     padding: 5rem;
+    background: url(../imgs/yellow.jpg) no-repeat center center/cover;
+    color: #333333;
+    height:100vh;
 }
 form {
     width: 50%;

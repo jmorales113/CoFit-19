@@ -1,3 +1,8 @@
+.container{
+    background: url(../imgs/yellow.jpg)  center/cover;
+    color: #333333;
+    height:100vh;
+}
 .pure-form {
     display: flex;
     padding: 3rem;
@@ -22,7 +27,7 @@
 .nutrition-card {
     padding: 2rem;
     margin: 3rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
 }
 
 .nutrition-card h3 {
@@ -36,6 +41,10 @@
 
 .nutrition-card p {
     margin-bottom: 1rem;
+}
+
+.nutritionDisplay{
+    box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75); 
 }
 
 
