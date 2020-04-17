@@ -77,14 +77,20 @@ input:focus {
 
 .button {
     font-size: 1.5rem;
-    background-color: grey;
+    background-color: #ffa41b;
+    border: solid 1px #00a8cc;
+    border-radius: 10%;
+    color: black;
+    cursor: pointer;
+    font-family: "Anton";
     padding: 1rem 2rem;
-    color: #fff;
+    box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
     transition: all 300ms;
     margin-top: 1rem;
-}
+    }
 
-form button:hover {
+
+    form button:hover {
     background: black
 }
 

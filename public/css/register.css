@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    background: url(../imgs/yellow.jpg)  center/cover;
 }
 .register-alert {
     background: rgb(255, 186, 186);
@@ -16,9 +18,9 @@
     display: flex;
     justify-content: center;
     padding: 5rem;
-    background: url(../imgs/yellow.jpg) no-repeat center center/cover;
+    background: url(../imgs/yellow.jpg)  center/cover;
     color: #333333;
-    height:100vh;
+    height: 100vh;
 }
 form {
     width: 50%;
