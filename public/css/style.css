@@ -11,8 +11,11 @@ body {
 
 a {
 	text-decoration: none;
-	color: currentColor;
+	color: #ffa41b;
+	border-radius: 10%;
 }
+
+
 
 /* header */
 
@@ -20,6 +23,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background:#00a8cc ;
 	border-bottom: 1px #000 solid;
 }
 
