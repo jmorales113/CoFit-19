@@ -1,14 +1,14 @@
 <section class="container">
         <div class="header">
-            <h1 class="l-heading">
+            <h2 >
                 Take Care Of Your Body, It's The Only Place You Have To Live.
-            </h1>
+            </h2>
         </div>
         <div class="side bg-dark p-2">
-            <div class="img">
-                <img src="./imgs/background.jpg" alt="body">
+            <div class="img" class="responsive">
+                <img src="./imgs/backgroun.jpg" alt="body">
             </div>
-            <div id="facts" class="bg-light py-1">
+            <div id="facts" >
                 <h2 id="text-center"><span class="text-primary">Did </span>You Know?</h2>
                 <div class="item">
                     <i class="fas fa-question-circle fa-2x"></i>
@@ -41,23 +41,31 @@
             <section id="aboutUs">
                 <h2 id="text-center"><span class="text-primary">About</span> Co-Fit19</h2>
                 <p>
-                    Here at CoFit-19 we are committed to providing you with all your fitness needs.
-                    You will find that you can
-                    And when you sign up you are given access to a custom plan suited for your particular
+                    Here at CoFit-19 our slogan is <strong><u>"Commit To Be Fit"</strong></u>  and we are committed to providing you with all of your fitness needs.
+                    With no committment you will find that you have access to an extensive nutrition database where you can search through a variety of foods choices.
+                   <hr>
+                    However when you <strong><u>sign up</strong></u> you are given access to a custom plan suited for your particular
                     fitness needs.
-                    Here you will find:
+                    Benefits of signing up include:
 </p>
-            <ul>
-                <li>Daily Food Log</li>
-                <li>BMI Calculator</li>
-                <li>Macros Calculator</li>
-                <li>Personalized Workouts</li>
+<br>
+            <ul id="benefits" >
+                <li id="benefits">Daily Calorie Log</li>
+                <li id="benefits" >BMI Calculator</li>
+                <li id="benefits" >Macros Calculator</li>
+                <li id="benefits">Personalized Workouts</li>
             </ul>
+            <br>
+           <hr>
+            <p>What are you waiting for <a  href="./register.handlebars">click here</a> to sign up today</p>
             </section>
-            <section class="meetUs">
-                <div class="wow bounceIn">
-                    <h2> Meet The Team </h2>
-                    <ul id="meetUs">
+
+            {{!-- <section class="meetUs"> --}}
+                <div id="meetTeam">
+                <h2 id="meetTeam"> Meet The Team </h2>
+                   </div>
+                   <div id="meetNames">
+                    <ul id="meetNames">
                         <li><a class="btn" href="https://github.com/elliotfouts/">Elliot</a></li>
                         <li><a class="btn" href="https://github.com/jmorales113">Jorge</a></li>
                         <li><a class="btn" href="https://github.com/sboulom">Steven</a></li>
@@ -65,4 +73,4 @@
                     </ul>
                 </div>
         </div>
-    </section>
+    {{!-- </section> --}}
