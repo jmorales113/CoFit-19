@@ -1,8 +1,8 @@
 h2{
-    font-size: 30px;
-    margin-bottom: 2rem;
-    margin-top: 2.5rem;
-    }
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
 .container {
     display: grid;
     width: 100%;
@@ -30,12 +30,28 @@ h2{
     color: rgb(197, 197, 197);
 }
 .main{
+    grid-area: m;
     margin: 3rem;
     margin-top: 0rem;
 }
 #history{
     align-self: center;
     justify-self: center;
+}
+
+.form-row {
+    display: flex;
+}
+.form-row input {
+    flex-grow: 1;
+    margin: .5rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+.form-button {
+    padding: 1rem 2rem;
+    background: grey;
+    color: #fff;
 }
 
 
