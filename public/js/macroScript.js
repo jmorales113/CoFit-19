@@ -7,7 +7,9 @@ var genderInput = $('#genderInput')
 $('#save').on('click', function (event) {
   event.preventDefault()
   const userData = {}
-  userData.heightInput = $('#heightInput').val()
+  let heightFt = $('#height-ft').val()
+  let heightIn = $('#height-in').val()
+  userData.heightInput = heightFt + "." + heightIn;
   userData.weightInput = $('#weightInput').val()
   userData.ageInput = $('#ageInput').val()
   userData.genderInput = $('#genderInput').val()

@@ -18,16 +18,16 @@
     align-items: center;
     justify-content: space-around;
     font-size: 1.5rem;
-    color: #fff;
     margin: 3rem;
-    max-height: 60vh;
+    max-height: 72vh;
 }
 .side-menu a {
+    color: #fff;
     transition: color 300ms;
 }
 
 .side-menu a:hover {
-    color: rgb(197, 197, 197);
+    color: #000;
 }
 
 .main {

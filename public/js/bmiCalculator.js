@@ -6,15 +6,11 @@
         form.on("submit", function(event){
             event.preventDefault()
             let result = $(".bmi-calculation")
-            let height = $(".height").val()
-            let weight = $(".weight").val()
-            let heightUnits = $(".height-info").val();
+            let heightFt = parseInt($(".height-ft").val().trim())
+            let heightIn = parseInt($(".height-in").val().trim())
+            let weight = parseInt($(".weight").val().trim())
             let weightUnits = $(".weight-info").val();
-            if (heightUnits == "in") {
-                height /= (0.3937 * 100);
-            } else {
-                height /= 100;
-            }
+            let height = (heightFt * 12 + heightIn) * .0254 ;
             if (weightUnits == "lbs") {
                 weight /= 2.20462;
             }

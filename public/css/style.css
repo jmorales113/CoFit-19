@@ -7,6 +7,7 @@
 body {
 	color: #222; 
 	background: #eee;
+	min-height: 100vh;
 }
 
 a {
@@ -23,20 +24,36 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background:#00a8cc ;
+	background:#4194a2 ;
 	border-bottom: 1px #000 solid;
+	color: #fff;
 }
 
 .pure-menu-heading {
 	font-size: 4rem;
+	color: #fff;
+	transition: all 300ms;
 }
 
-.pure-menu-list a {
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-link {
+	font-size: 1.2rem;
+	color: #fff;
+	margin: 1rem;
+}
+
+
+.nav-link {
 	transition: color 300ms;
 }
 
-.pure-menu-list a:hover {
-	color:  #ffa41b;;
+.nav-link:hover, 
+.pure-menu-heading:hover {
+	color:  #000000;
 }
 
 @media (max-width: 900px) {

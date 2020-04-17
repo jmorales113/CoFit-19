@@ -9,21 +9,18 @@
         <h2 class="main-title">Macro Calculator</h2>
         <form action="/myplan/macro-calculator" action="POST">
                 <div class="formRow">
-                    <input id="heightInput" type="text" class="pure-input-1-2" placeholder="Height ex 5.6">
-                    <select class="formRow-select" id="unit">
-                        <option value="in">in.</option>
-                        <option value="cm">cm.</option>
-                    </select>
+                    <input id="height-ft" type="number" class="form-input" placeholder="5'">
+                    <input id="height-in" type="number" class="form-input" placeholder='9"'>
                 </div>
                 <div class="formRow">
-                    <input id="weightInput" type="text" class="pure-input-1-2" placeholder="Weight">
+                    <input id="weightInput" type="number" class="form-input" placeholder="Weight">
                     <select class="formRow-select" i>
                         <option value="lbs">lbs.</option>
                         <option value="kgs">kgs.</option>
                     </select>
                 </div>
                 <div class="formRow">
-                    <input id="ageInput" type="text" class="pure-input-1-2" placeholder="Age">
+                    <input id="ageInput" type="number" class="form-input" placeholder="Age">
                 </div>
                 <div class="formRow">
                     <select id="genderInput">
@@ -39,10 +36,9 @@
                     <option value="regularEx">Regularly exercise</option>
                 </select>
                 </div>
-               <button id ="save" class = "button" type="submit" >Calculate</button>
-                <h1 class="bmi-calculation"></h1>
-                <div class="result">
-                    <p class="displayCalPerDay"></p>
+                <div class="formRow">
+                    <button id ="save" class = "button" type="submit" >Calculate</button>
+                    <h1 class="displayCalPerDay"></h1>
                 </div>
             </fieldset>
         </form>

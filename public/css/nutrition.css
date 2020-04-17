@@ -20,14 +20,14 @@
 }
 
 #button-search:hover {
-    color: #555;
+    color: #fff;
     cursor: pointer;
 }
 
 .nutrition-card {
     padding: 2rem;
     margin: 3rem;
-    box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+    border: 1px solid #000;
 }
 
 .nutrition-card h3 {

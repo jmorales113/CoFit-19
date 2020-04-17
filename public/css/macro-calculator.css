@@ -34,15 +34,15 @@ h2, h3{
     align-items: center;
     justify-content: space-around;
     font-size: 1.5rem;
-    color: #fff;
     margin: 3rem;
 }
 .side a {
+    color: #fff;
     transition: color 300ms;
 }
 
 .side a:hover {
-    color: rgb(197, 197, 197);
+    color: #000;
 }
 form {
     width: 100%;
@@ -52,6 +52,10 @@ form input {
     flex-grow: 1;
     font-size: 1.5rem;
     padding: 10px;
+    margin-bottom: 2rem;
+}
+form input:nth-child(2) {
+    margin-left: 1rem;
 }
 .formRow-select {
     margin-left: 1rem;
@@ -60,16 +64,18 @@ form select {
     font-size: 1.5rem;
     height: 100%;
     background: none;
+    border: 1px #000 solid;
+    margin-bottom: 1rem;
 }
 form button {
     font-size: 1.5rem;
-    background: grey;
+    background: #fff;
     padding: 1rem 2rem;
-    color: #fff;
+    color: #000;
     transition: all 300ms;
 }
 form button:hover {
-    background: rgb(99, 65, 65);
+    background: grey;
 }
 
 .card {
@@ -91,7 +97,7 @@ form button:hover {
     font-size: 30pt;
 }
 .displayCalPerDay {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 1250px) {
@@ -104,6 +110,7 @@ form button:hover {
     .side {
         flex-direction: row;
         margin: 0rem;
+        padding: 1.5rem;
     }
 }
 @media (max-width: 800px) {
