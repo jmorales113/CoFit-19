@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+const connection = require('../db');
 
 router
 	.get('/', authenticationMiddleware(), (req, res) => {
 		console.log(req.user);
 		console.log(req.isAuthenticated());
+
 		res.render('daily-log', { layout: 'myplan', title: 'Daily Log', cssLink: '../css/daily-log.css' });
 	})
 	.get('/bmi-calculator', authenticationMiddleware(), (req, res) => {
