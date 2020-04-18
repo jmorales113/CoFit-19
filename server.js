@@ -24,7 +24,7 @@ app.use(express.json());
 // Authentication Middleware
 let options;
 if (process.env.JAWSDB_URL) {
-	options = {process.env.JAWSDB_URL}
+	options = process.env.JAWSDB_URL
   } else {
 	options = {
 		host: 'localhost',
