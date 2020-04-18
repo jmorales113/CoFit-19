@@ -22,13 +22,18 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Authentication Middleware
-var options = {
-	host: 'localhost',
-	port: 3306,
-	user: 'root',
-	password: '',
-	database: 'cofit19_db'
-};
+let options;
+if (process.env.JAWSDB_URL) {
+	options = {process.env.JAWSDB_URL}
+  } else {
+	options = {
+		host: 'localhost',
+		post: 3306,
+		user: 'root',
+		password: '',
+		database: 'cofit19_db'
+	}
+  }
 
 var sessionStore = new MySQLStore(options);
 
