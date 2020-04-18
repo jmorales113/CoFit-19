@@ -36,7 +36,7 @@ if (process.env.JAWSDB_URL) {
   }
 }
 
-var sessionStore = new MySQLStore(options)
+var sessionStore = new MySQLStore({}, connection)
 
 app.use(
   session({
