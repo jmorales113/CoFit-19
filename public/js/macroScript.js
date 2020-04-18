@@ -37,7 +37,6 @@ $('#save').on('click', function (event) {
   const carbs = Math.floor((calories * 0.4) / 4);
   const protein = Math.floor((calories * 0.3) / 4);
   const fat = Math.floor((calories * 0.3) / 9);
-
   const macroData = {calories,protein,carbs,fat}
 
   $.post('/myplan/macro-calculator', macroData, function (err, data) {
@@ -45,7 +44,6 @@ $('#save').on('click', function (event) {
     console.log(data)
   })
 })
-
 //function to convert ft to inches
 function ftConversion(heightInput) {
   let inchesHeight = heightInput / 12
