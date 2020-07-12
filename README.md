@@ -10,14 +10,15 @@ To sign up for an account, click on the "Sign Up" link on the homepage and provi
 
 To log in to an account, click the "Log In" link and provide your email and password on the form.
 
-### Chat with Friends
-Chat with friends or family by choosing a username and choosing the same room.
+### Macro Calculator
 
-### Tetris
+On the macro calculator page, enter your height, weight, age and gender(optional) to view your 
+
+### BMI-Calculator
 
 Bring down blocks from the top of the screen. You can move the blocks around, either left to right and/or you can rotate them. Your objective is to get all the blocks to fill all the empty space in a line at the bottom of the screen; whenever you do this, you’ll find that the blocks vanish and you get awarded some points.
 
-### Tic-Tac-Toe
+### Nutrional Facts
 
 The player who is playing "X" always goes first. Players alternate clicking on the square they want to render Xs and Os on the board until either player has three in a row, horizontally, vertically, or diagonally or until all squares on the grid are filled. If a player is able to draw three Xs or three Os in a row, then that player wins. If all squares are filled and neither player has made a complete row of Xs or Os, then the game is a draw.
 
