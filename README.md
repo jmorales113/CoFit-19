@@ -31,6 +31,7 @@ On the Nutrition page, enter any food in the search bar to see the nutritional i
 - HTML
 - CSS
 - JavaScript
+- Handlebars
 - Node.js
 - MySQL
 - Serialize
